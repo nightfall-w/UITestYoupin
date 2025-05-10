@@ -15,8 +15,12 @@ from utils.logging import logger
 
 
 class TestLogin(BaseCase):
-    def setup_class(self):
-        pass
+    def teardown_class(self):
+        """
+        所有case运行结束后销毁浏览器实例
+        """
+        BrowserFactory.close_all()
+        logger.info("所有case运行结束，销毁浏览器实例")
 
     def test_login(self):
         """
