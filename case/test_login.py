@@ -38,7 +38,7 @@ class TestLogin(BaseCase):
         # 点击登录按钮
         home_page.click_login_button()
         # 等待隐私协议弹窗出现
-        home_page.wait_for_element_visible(locator='.lib10-secret-dialog-footer')
+        home_page.wait_for_privacy_agreement_dialog()
         # 点击隐私协议弹窗中的同意并继续按钮
         home_page.click_privacy_agreement_dialog_agree_button_and_continue()
 
