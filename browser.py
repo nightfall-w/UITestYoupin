@@ -12,6 +12,7 @@ class BrowserFactory:
     """
     浏览器实例的抽象类，将浏览器进行封装，方便在case中直接引用
     """
+    _playwright = None
     _browser = None
     _context = None
     _page = None
