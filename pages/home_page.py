@@ -30,6 +30,9 @@ class HomePage(BasePage):
         self.page.locator('.lib10-secret-dialog-footer .ok-btn').click()
 
     def username_is_exist(self):
+        """
+        判断首页顶部用户名是否存在
+        """
         return self.page.locator('.m-username').is_visible()
 
     def get_current_username(self):
