@@ -15,6 +15,9 @@ from utils.logging import logger
 
 
 class TestLogin(BaseCase):
+    def setup_class(self):
+        pass
+
     def test_login(self):
         """
         case： 测试登录
