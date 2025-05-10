@@ -15,12 +15,21 @@ class HomePage(BasePage):
     """
 
     def click_login_button(self):
+        """
+        点击登录按钮
+        """
         self.page.locator('.m-safe-anchor:text("登录")').click()
 
     def click_register_button(self):
+        """
+        点击注册按钮
+        """
         self.page.locator('.m-safe-anchor:text("注册")').click()
 
     def wait_for_privacy_agreement_dialog(self):
+        """
+        等待隐私协议弹窗可见
+        """
         self.wait_for_element_visible(locator='.lib10-secret-dialog-footer')
 
     def click_privacy_agreement_dialog_agree_button_and_continue(self):
