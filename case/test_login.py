@@ -46,13 +46,13 @@ class TestLogin(BaseCase):
         account_page = AccountPage(home_page.page)
         # 切换到-使用密码登录
         account_page.switch_to_login_by_password()
-        #  输入手机号
+        # 输入手机号
         account_page.input_phone_code(ConfigParser.get_config(sector='PhoneCode', item=self.env()))
         # 输入密码
         account_page.input_password(ConfigParser.get_config(sector='PassWord', item=self.env()))
         # 点击隐私协议复选框
         account_page.click_privacy_agreement_checkbox()
-        #  点击登录按钮
+        # 点击登录按钮
         account_page.click_login_button()
 
         time.sleep(3)
